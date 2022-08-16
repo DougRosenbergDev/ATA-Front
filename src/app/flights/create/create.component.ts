@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
-import { FlightService } from '../flight.service';
+import { TravelService } from '../travel.service';
 
 @Component({
   selector: 'app-create',
@@ -13,7 +13,7 @@ export class CreateComponent implements OnInit {
   public newFlightForm!: FormGroup
 
   constructor(
-    private flightService: FlightService,
+    private travelService: TravelService,
     private router: Router
   ) { }
 

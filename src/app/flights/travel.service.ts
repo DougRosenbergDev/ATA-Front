@@ -8,10 +8,10 @@ import { Flight, FlightDTO } from './flight';
 @Injectable({
   providedIn: 'root'
 })
-export class FlightService {
+export class TravelService {
   //switch out these lines once swagger is running...
   //private musicUrl = 'http://localhost:7004/api/Music';
-  private flightUrl = 'api/Flight';
+  private travelUrl = 'api/Travel';
 
 private httpOptions = {
   headers: new HttpHeaders({
@@ -22,16 +22,16 @@ private httpOptions = {
 constructor(private http: HttpClient) { }
 
 getSongs(): Observable<Flight[]> {
-  return this.http.get<Flight[]>(this.flightUrl, this.httpOptions);
+  return this.http.get<Flight[]>(this.travelUrl, this.httpOptions);
 }
 
 getFlight(id: number): Observable<Flight> {
-  let url = `${this.flightUrl}/${id}`;
+  let url = `${this.travelUrl}/${id}`;
   return this.http.get<Flight>(url, this.httpOptions);
 }
 
 createFlight(flight: Flight): Observable<Flight> {
-  return this.http.post<Flight>(this.flightUrl, flight, this.httpOptions);
+  return this.http.post<Flight>(this.travelUrl, flight, this.httpOptions);
 }
 
 updateFlight(flight: Flight): Observable<Flight> {
