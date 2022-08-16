@@ -22,9 +22,9 @@ export class IndexComponent implements OnInit {
     this.travelService.getSongs().subscribe(flights => this.flights = flights);
   }
 
+}
+
 // provide a way 
 // retrieveSongs() : void {
 //   this.musicService.getSongs().subscribe(songs => this.songs = songs);
 // }
-
-}

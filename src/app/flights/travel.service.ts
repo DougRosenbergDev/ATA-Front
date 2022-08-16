@@ -11,7 +11,8 @@ import { Flight, FlightDTO } from './flight';
 export class TravelService {
   //switch out these lines once swagger is running...
   //private musicUrl = 'http://localhost:7004/api/Music';
-  private travelUrl = 'api/Travel';
+  private travelUrl = 'https://localhost:7004/api/Flights';
+  //private travelUrl = 'api/Flights';
 
 private httpOptions = {
   headers: new HttpHeaders({

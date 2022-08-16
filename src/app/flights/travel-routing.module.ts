@@ -4,9 +4,9 @@ import { IndexComponent } from "./index/index.component";
 import { CreateComponent } from "./create/create.component";
 
 const routes: Routes = [
-    { path: 'travel', redirectTo: 'travel/index', pathMatch: 'full' },
-    { path: 'travel/index', component: IndexComponent },
-    { path: 'travel/create', component: CreateComponent },
+    { path: 'Flights', redirectTo: 'Flights/index', pathMatch: 'full' },
+    { path: 'Flights/index', component: IndexComponent },
+    { path: 'Flights/create', component: CreateComponent },
 ];
 
 @NgModule({
