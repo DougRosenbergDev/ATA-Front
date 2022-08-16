@@ -18,9 +18,9 @@ import { TravelModule } from './flights/travel.module';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    ),
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDataService, { dataEncapsulation: false }
+    // ),
     TravelModule
   ],
   providers: [],
