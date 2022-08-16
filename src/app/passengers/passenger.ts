@@ -1,24 +1,18 @@
-export interface Flight {
+export interface Passenger {
     id: number;
-    flightNumber: string;
-    departureDate: string;
-    arrivalDate: string;
-    departureTime: string;
-    arrivalTime: string;
-    departureAirport: string;
-    arrivalAirport: string;
-    passengerLimit: string;
+    firstName: string
+    lastName: string
+    email: string
+    job: string
+    age: number
 }
 
-export interface FlightDTO {
-    flightNumber: string;
-    departureDate: string;
-    arrivalDate: string;
-    departureTime: string;
-    arrivalTime: string;
-    departureAirport: string;
-    arrivalAirport: string;
-    passengerLimit: string;
+export interface PassengerDTO {
+    firstName: string
+    lastName: string
+    email: string
+    job: string
+    age: number
 }
 
 

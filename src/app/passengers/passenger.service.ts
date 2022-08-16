@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { from, Observable, throwError } from 'rxjs';
 import { catchError, of } from 'rxjs';
 
-import { Flight, FlightDTO } from './flight';
+import { Passenger, PassengerDTO } from './passenger';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ import { Flight, FlightDTO } from './flight';
 export class TravelService {
   //switch out these lines once swagger is running...
   //private musicUrl = 'http://localhost:7004/api/Music';
-  private travelUrl = 'https://localhost:7004/api/Flights';
+  private travelUrl = 'https://localhost:7004/api/Passengers';
   //private travelUrl = 'api/Flights';
 
 private httpOptions = {
@@ -22,26 +22,26 @@ private httpOptions = {
 
 constructor(private http: HttpClient) { }
 
-getFlights(): Observable<Flight[]> {
-  return this.http.get<Flight[]>(this.travelUrl, this.httpOptions);
+getPassengers(): Observable<Passenger[]> {
+  return this.http.get<Passenger[]>(this.travelUrl, this.httpOptions);
 }
 
-getFlight(id: number): Observable<Flight> {
+getPassenger(id: number): Observable<Passenger> {
   let url = `${this.travelUrl}/${id}`;
-  return this.http.get<Flight>(url, this.httpOptions);
+  return this.http.get<Passenger>(url, this.httpOptions);
 }
 
-createFlight(flight: Flight): Observable<Flight> {
-  return this.http.post<Flight>(this.travelUrl, flight, this.httpOptions);
+createPassenger(passenger: Passenger): Observable<Passenger> {
+  return this.http.post<Passenger>(this.travelUrl, passenger, this.httpOptions);
 }
 
-updateFlight(flight: Flight): Observable<Flight> {
-  let url = `${this.travelUrl}/${flight.id}`;
-  return this.http.put<Flight>(url, flight, this.httpOptions);
+updatePassenger(passenger: Passenger): Observable<Passenger> {
+  let url = `${this.travelUrl}/${passenger.id}`;
+  return this.http.put<Passenger>(url, passenger, this.httpOptions);
 }
 
-deleteFlight(id: Number): Observable<Flight> {
-  return this.http.delete<Flight>(`${this.travelUrl}/${id}`, this.httpOptions);
+deletePassenger(id: Number): Observable<Passenger> {
+  return this.http.delete<Passenger>(`${this.travelUrl}/${id}`, this.httpOptions);
 }
 
 // errorHandler(error: any, caught: Observable<Flight[]>) {

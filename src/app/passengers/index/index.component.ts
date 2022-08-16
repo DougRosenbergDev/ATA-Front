@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TravelService } from '../travel.service';
-import { Flight } from '../flight';
+import { TravelService } from '../passenger.service';
+import { Flight } from '../passenger';
 
 @Component({
   selector: 'app-index',
