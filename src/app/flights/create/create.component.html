@@ -4,6 +4,14 @@
     <form [formGroup]="newFlightForm" (ngSubmit)="submit()" >
 
         <div class="form-group">
+            <label for="flightNumber">Flight Number</label>
+            <input type="text" class="form-control" id="flightNumber" formControlName="flightNumber" />
+            <div *ngIf="f['flightNumber'].touched && f['flightNumber'].invalid" class="alert alert-danger">
+                <div *ngIf="f['flightNumber'].errors f['flightNumber'].errors[required]">Flight Number is required</div>
+            </div>
+        </div>
+
+        <div class="form-group">
             <label for="departureDate">Departure Date</label>
             <input type="text" class="form-control" id="departureDate" formControlName="departureDate" />
             <div *ngIf="f['departureDate'].touched && f['departureDate'].invalid" class="alert alert-danger">

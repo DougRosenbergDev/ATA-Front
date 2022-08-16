@@ -19,6 +19,7 @@ export class CreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.newFlightForm = new FormGroup({
+      FlightNumber: new FormControl('', Validators.required),
       DepartureDate: new FormControl('', Validators.required),
       ArrivalDate: new FormControl('', Validators.required),
       DepartureTime: new FormControl('', Validators.required),

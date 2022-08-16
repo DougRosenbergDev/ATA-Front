@@ -9,7 +9,7 @@ import { PersonService } from '../person.service';
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.css']
 })
-export class CreateComponent implements OnInit {
+export class PCreateComponent implements OnInit {
   public newPassengerForm!: FormGroup
 
   constructor(
@@ -34,8 +34,8 @@ export class CreateComponent implements OnInit {
     this.personService.createPassenger(this.newPassengerForm.value).subscribe(() => {
       console.log(this.newPassengerForm.value);
       console.log(this.newPassengerForm.valid);
-      console.log("Flight created successfully");
-      this.router.navigateByUrl('Flights/index');
+      console.log("Passenger created successfully");
+      this.router.navigateByUrl('Passengers/index');
     });   
   }
 }
