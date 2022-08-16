@@ -1,73 +1,49 @@
 <div class="container">
     <h1>Create a New Flight</h1>
-    <a href="#" routerLink="/Flights/index" class="btn btn-primary">&lt;&lt; Back</a>
-    <form [formGroup]="newFlightForm" (ngSubmit)="submit()" >
+    <a href="#" routerLink="/Passengers/index" class="btn btn-primary">&lt;&lt; Back</a>
+    <form [formGroup]="newPassengerForm" (ngSubmit)="submit()" >
 
         <div class="form-group">
-            <label for="flightNumber">Flight Number</label>
-            <input type="text" class="form-control" id="flightNumber" formControlName="flightNumber" />
-            <div *ngIf="f['flightNumber'].touched && f['flightNumber'].invalid" class="alert alert-danger">
-                <div *ngIf="f['flightNumber'].errors f['flightNumber'].errors[required]">Flight Number is required</div>
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" formControlName="firstName" />
+            <div *ngIf="f['firstName'].touched && f['firstName'].invalid" class="alert alert-danger">
+                <div *ngIf="f['firstName'].errors f['firstName'].errors[required]">First Name is required</div>
             </div>
         </div>
 
         <div class="form-group">
-            <label for="departureDate">Departure Date</label>
-            <input type="text" class="form-control" id="departureDate" formControlName="departureDate" />
-            <div *ngIf="f['departureDate'].touched && f['departureDate'].invalid" class="alert alert-danger">
-                <div *ngIf="f['departureDate'].errors f['departureDate'].errors[required]">Departure Date is required</div>
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" formControlName="lastName" />
+            <div *ngIf="f['lastName'].touched && f['lastName'].invalid" class="alert alert-danger">
+                <div *ngIf="f['lastName'].errors f['lastName'].errors[required]">Last Name is required</div>
             </div>
         </div>
 
         <div class="form-group">
-            <label for="arrivalDate">Arrival Date</label>
-            <input type="text" class="form-control" id="arrivalDate" formControlarrivalDate="arrivalDate" />
-            <div *ngIf="f['arrivalDate'].touched && f['arrivalDate'].invalid" class="alert alert-danger">
-                <div *ngIf="f['arrivalDate'].errors f['arrivalDate'].errors[required]">Arrival Date is required</div>
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" formControlemail="email" />
+            <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                <div *ngIf="f['email'].errors f['email'].errors[required]">Email is required</div>
             </div>
         </div>
 
         <div class="form-group">
-            <label for="departureTime">departureTime</label>
-            <input type="text" placeholder="00:00:00" class="form-control" id="departureTime" formControlName="departureTime" />
-            <div *ngIf="f['departureTime'].touched && f['departureTime'].invalid" class="alert alert-danger">
-                <div *ngIf="f['departureTime'].errors f['departureTime'].errors[required]">departureTime is required</div>
+            <label for="job">Job</label>
+            <input type="text" placeholder="00:00:00" class="form-control" id="job" formControlName="job" />
+            <div *ngIf="f['job'].touched && f['job'].invalid" class="alert alert-danger">
+                <div *ngIf="f['job'].errors f['job'].errors[required]">Job is required</div>
             </div>
         </div>
 
         <div class="form-group">
-            <label for="arrivalTime">Arrival Time</label>
-            <input type="text" class="form-control" id="arrivalTime" formControlName="arrivalTime" />
-            <div *ngIf="f['arrivalTime'].touched && f['arrivalTime'].invalid" class="alert alert-danger">
-                <div *ngIf="f['arrivalTime'].errors f['arrivalTime'].errors[required]">Arrival Time is required</div>
+            <label for="age">Age</label>
+            <input type="text" class="form-control" id="age" formControlName="age" />
+            <div *ngIf="f['age'].touched && f['age'].invalid" class="alert alert-danger">
+                <div *ngIf="f['age'].errors f['age'].errors[required]">Age is required</div>
             </div>
         </div>
 
-        <div class="form-group">
-            <label for="departureAirport">Departure Airport</label>
-            <input type="text" class="form-control" id="departureAirport" formControlName="departureAirport" />
-            <div *ngIf="f['departureAirport'].touched && f['departureAirport'].invalid" class="alert alert-danger">
-                <div *ngIf="f['departureAirport'].errors f['departureAirport'].errors[required]">Departure Airport is required</div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="arrivalAirport">Arrival Airport</label>
-            <input type="text" class="form-control" id="arrivalAirport" formControlName="arrivalAirport" />
-            <div *ngIf="f['arrivalAirport'].touched && f['arrivalAirport'].invalid" class="alert alert-danger">
-                <div *ngIf="f['arrivalAirport'].errors f['arrivalAirport'].errors[required]">Arrival Airport is required</div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="passengerLimit">Passenger Limit</label>
-            <input type="text" class="form-control" id="passengerLimit" formControlName="passengerLimit" />
-            <div *ngIf="f['passengerLimit'].touched && f['passengerLimit'].invalid" class="alert alert-danger">
-                <div *ngIf="f['passengerLimit'].errors f['passengerLimit'].errors[required]">Passenger Limit is required</div>
-            </div>
-        </div>
-
-        <button type="submit" class="btn btn-primary" [disabled]="!newFlightForm.valid">Submit</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!newPassengerForm.valid">Submit</button>
     </form>
 </div>
 

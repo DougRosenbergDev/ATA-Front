@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TravelService } from '../passenger.service';
-import { Flight } from '../passenger';
+import { PersonService } from '../person.service';
+import { Passenger } from '../passenger';
 
 @Component({
   selector: 'app-index',
@@ -8,18 +8,18 @@ import { Flight } from '../passenger';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-  flights: Flight[] = [];
+  passengers: Passenger[] = [];
 
 //ask angular to inject our musicService
-  constructor(private travelService: TravelService) { }
+  constructor(private personService: PersonService) { }
 
   // initialization of the component
   ngOnInit(): void {
-    this.retrieveFlights();
+    this.retrievePassengers();
   }
 
-  retrieveFlights(): void {
-    this.travelService.getFlights().subscribe(flights => this.flights = flights);
+  retrievePassengers(): void {
+    this.personService.getPassengers().subscribe(passengers => this.passengers = passengers);
   }
 
 }

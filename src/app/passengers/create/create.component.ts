@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
-import { TravelService } from '../passenger.service';
+import { PersonService } from '../person.service';
 
 @Component({
   selector: 'app-create',
@@ -10,32 +10,30 @@ import { TravelService } from '../passenger.service';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent implements OnInit {
-  public newFlightForm!: FormGroup
+  public newPassengerForm!: FormGroup
 
   constructor(
-    private travelService: TravelService,
+    private personService: PersonService,
     private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.newFlightForm = new FormGroup({
-      FlightNumber: new FormControl('', Validators.required),
-      DepartureDate: new FormControl('', Validators.required),
-      ArrivalDate: new FormControl('', Validators.required),
-      DepartureTime: new FormControl('', Validators.required),
-      ArrivalTime: new FormControl('', Validators.required),
-      DepartureAirport: new FormControl('', Validators.required),
-      ArrivalAirport: new FormControl('', Validators.required),
-      PassengerLimit: new FormControl('', Validators.required)
+    this.newPassengerForm = new FormGroup({
+      firstName: new FormControl('', Validators.required),
+      lastName: new FormControl('', Validators.required),
+      email: new FormControl('', Validators.required),
+      job: new FormControl('', Validators.required),
+      age: new FormControl('', Validators.required),
+      
     });
   }
 
-  get f() { return this.newFlightForm.controls; }
+  get f() { return this.newPassengerForm.controls; }
 
   submit(){
-    this.travelService.createFlight(this.newFlightForm.value).subscribe(() => {
-      console.log(this.newFlightForm.value);
-      console.log(this.newFlightForm.valid);
+    this.personService.createPassenger(this.newPassengerForm.value).subscribe(() => {
+      console.log(this.newPassengerForm.value);
+      console.log(this.newPassengerForm.valid);
       console.log("Flight created successfully");
       this.router.navigateByUrl('Flights/index');
     });   

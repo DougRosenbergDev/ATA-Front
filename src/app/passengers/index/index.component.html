@@ -1,6 +1,6 @@
 <div class="container">
-    <h1>Flights</h1>
-    <a href="#" routerLink="/Flights/create/" class="btn btn-success">+ Create A Flight</a>
+    <h1>Passengers</h1>
+    <a href="#" routerLink="/person/create/" class="btn btn-success">+ Create A Passenger</a>
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
@@ -12,12 +12,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let flight of flights">
-                <td>{{ flight.firstName }}</td>
-                <td>{{ flight.lastName }}</td>
-                <td>{{ flight.email }}</td>
-                <td>{{ flight.job }}</td>
-                <td>{{ flight.age }}</td>            
+            <tr *ngFor="let passenger of passengers">
+                <td>{{ passenger.firstName }}</td>
+                <td>{{ passenger.lastName }}</td>
+                <td>{{ passenger.email }}</td>
+                <td>{{ passenger.job }}</td>
+                <td>{{ passenger.age }}</td>            
             </tr>
         </tbody>
     </table>
