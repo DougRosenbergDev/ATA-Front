@@ -36,7 +36,7 @@ export class CreateComponent implements OnInit {
       console.log(this.newFlightForm.value);
       console.log(this.newFlightForm.valid);
       console.log("Flight created successfully");
-      this.router.navigateByUrl('music/index');
+      this.router.navigateByUrl('flight/index');
     });   
   }
 }

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
-import { MusicRoutingModule } from './flight-routing.module';
+import { FlightRoutingModule } from './flight-routing.module';
 import { IndexComponent } from './index/index.component';
 import { CreateComponent } from './create/create.component';
 
@@ -14,7 +14,7 @@ import { CreateComponent } from './create/create.component';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    MusicRoutingModule
+    FlightRoutingModule
   ]
 })
-export class MusicModule { }
+export class FlightModule { }
