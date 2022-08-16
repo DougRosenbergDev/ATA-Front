@@ -19,7 +19,7 @@ export class IndexComponent implements OnInit {
   }
 
   retrieveFlights(): void {
-    this.travelService.getSongs().subscribe(flights => this.flights = flights);
+    this.travelService.getFlights().subscribe(flights => this.flights = flights);
   }
 
 }

@@ -22,7 +22,7 @@ private httpOptions = {
 
 constructor(private http: HttpClient) { }
 
-getSongs(): Observable<Flight[]> {
+getFlights(): Observable<Flight[]> {
   return this.http.get<Flight[]>(this.travelUrl, this.httpOptions);
 }
 
