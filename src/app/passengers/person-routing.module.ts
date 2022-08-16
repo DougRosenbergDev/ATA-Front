@@ -1,11 +1,11 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { IndexComponent } from "./index/index.component";
+import { PIndexComponent } from "./pindex/index.component";
 import { CreateComponent } from "./create/create.component";
 
 const routes: Routes = [
     { path: 'Person', redirectTo: 'Person/index', pathMatch: 'full' },
-    { path: 'Person/index', component: IndexComponent },
+    { path: 'Person/index', component: PIndexComponent },
     { path: 'Person/create', component: CreateComponent },
 ];
 

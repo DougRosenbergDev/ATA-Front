@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { IndexComponent } from "./passengers/index/index.component";
+import { PIndexComponent } from "./passengers/pindex/index.component";
+import { FIndexComponent } from "./flights/findex/index.component";
 
 const routes: Routes = [
+  { path: '', redirectTo: 'Flights', pathMatch: 'full' },
+  { path: 'Flights', component: FIndexComponent },
   { path: '', redirectTo: 'Passengers', pathMatch: 'full' },
-  { path: 'Passengers', component: IndexComponent },
+  { path: 'Passengers', component: PIndexComponent },
 ];
 
 @NgModule({

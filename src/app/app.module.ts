@@ -7,6 +7,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PersonModule } from './passengers/person.module';
+import { TravelModule } from './flights/travel.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PersonModule } from './passengers/person.module';
     // HttpClientInMemoryWebApiModule.forRoot(
     //   InMemoryDataService, { dataEncapsulation: false }
     // ),
-    PersonModule
+    PersonModule,
+    TravelModule
   ],
   providers: [],
   bootstrap: [AppComponent]
