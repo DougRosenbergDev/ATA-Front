@@ -35,12 +35,12 @@ createFlight(flight: Flight): Observable<Flight> {
 }
 
 updateFlight(flight: Flight): Observable<Flight> {
-  let url = `${this.flightUrl}/${flight.id}`;
+  let url = `${this.travelUrl}/${flight.id}`;
   return this.http.put<Flight>(url, flight, this.httpOptions);
 }
 
 deleteFlight(id: Number): Observable<Flight> {
-  return this.http.delete<Flight>(`${this.flightUrl}/${id}`, this.httpOptions);
+  return this.http.delete<Flight>(`${this.travelUrl}/${id}`, this.httpOptions);
 }
 
 // errorHandler(error: any, caught: Observable<Flight[]>) {

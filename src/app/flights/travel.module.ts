@@ -14,7 +14,7 @@ import { CreateComponent } from './create/create.component';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    FlightRoutingModule
+    TravelRoutingModule
   ]
 })
 export class TravelModule { }

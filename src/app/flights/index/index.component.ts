@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FlightService } from '../travel.service';
+import { TravelService } from '../travel.service';
 import { Flight } from '../flight';
 
 @Component({
@@ -11,7 +11,7 @@ export class IndexComponent implements OnInit {
   flights: Flight[] = [];
 
 //ask angular to inject our musicService
-  constructor(private flightService: FlightService) { }
+  constructor(private travelService: TravelService) { }
 
   // initialization of the component
   ngOnInit(): void {
@@ -19,7 +19,7 @@ export class IndexComponent implements OnInit {
   }
 
   retrieveFlights(): void {
-    this.flightService.getSongs().subscribe(flights => this.flights = flights);
+    this.travelService.getSongs().subscribe(flights => this.flights = flights);
   }
 
 // provide a way 
