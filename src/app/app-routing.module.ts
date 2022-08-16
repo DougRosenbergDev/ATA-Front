@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from "./flights/index/index.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'flights', pathMatch: 'full' },
+  { path: '', redirectTo: 'flight', pathMatch: 'full' },
   { path: 'flight', component: IndexComponent },
 ];
 
