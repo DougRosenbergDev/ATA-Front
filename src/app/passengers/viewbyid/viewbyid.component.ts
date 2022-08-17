@@ -28,7 +28,7 @@ export class ViewComponent implements OnInit {
    * @return response()
    */
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['postId'];
+    this.id = this.route.snapshot.params['id'];
         
     this.personService.getPassenger(this.id).subscribe((data: Passenger)=>{
       this.passenger = data;

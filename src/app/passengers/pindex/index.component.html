@@ -20,13 +20,16 @@
                 <td>{{ passenger.job }}</td>
                 <td>{{ passenger.age }}</td>
                 <td>
-                    <button routerLink="/Passengers/edit/" class="btn btn-info">
-                        
+                    <a href="#" [routerLink]="['/passenger/', passenger.id]" class="btn btn-secondary">Details</a>
+                    <a href="#" [routerLink]="['/Passengers/edit/', passenger.id]" class="btn btn-warning">Edit</a>
+                    <a href="#" [routerLink]="['/Passengers/delete', passenger.id]" class="btn btn-danger">Delete</a>
+
+                    <!-- <button [routerLink]="['/Passengers/edit/']" class="btn btn-success">
                         Edit
-                    </button>
+                    </button>/                    
                     <button class="btn btn-danger">
                         Delete
-                    </button>
+                    </button> -->
                 </td>          
             </tr>
         </tbody>
