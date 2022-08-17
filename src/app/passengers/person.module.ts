@@ -6,12 +6,14 @@ import { PersonRoutingModule } from './person-routing.module';
 import { PIndexComponent } from './pindex/index.component';
 import { PCreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
+import { DeleteComponent } from './delete/delete.component';
 
 @NgModule({
   declarations: [
     PIndexComponent,
     PCreateComponent,
-    EditComponent
+    EditComponent,
+    DeleteComponent
   ],
   imports: [
     CommonModule,

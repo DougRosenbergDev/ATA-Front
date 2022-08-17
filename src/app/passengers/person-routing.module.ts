@@ -2,11 +2,14 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { PIndexComponent } from "./pindex/index.component";
 import { PCreateComponent } from "./create/create.component";
+import { EditComponent } from "./edit/edit.component";
 
 const routes: Routes = [
     { path: 'Passengers', redirectTo: 'Passengers/index', pathMatch: 'full' },
     { path: 'Passengers/index', component: PIndexComponent },
     { path: 'Passengers/create', component: PCreateComponent },
+    { path: 'Passengers/edit', component: EditComponent },
+
 ];
 
 @NgModule({
