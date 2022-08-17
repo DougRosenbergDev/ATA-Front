@@ -8,10 +8,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PersonModule } from './passengers/person.module';
 import { TravelModule } from './flights/travel.module';
+// import { BookingsComponent } from './bookings/bookings.component';
+// import { BindexComponent } from './bookings/bindex/bindex.component';
+// import { BookingsModule } from './bookings/bookings.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+    // PersonModule,
+    // TravelModule,
+    // BookingsComponent,
+    // BindexComponent,
   ],
   imports: [
     BrowserModule, 
@@ -23,7 +30,8 @@ import { TravelModule } from './flights/travel.module';
     //   InMemoryDataService, { dataEncapsulation: false }
     // ),
     PersonModule,
-    TravelModule
+    TravelModule,
+    // BookingsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

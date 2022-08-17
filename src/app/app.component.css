@@ -1,8 +1,8 @@
 .theme {
-    background-image: url(../assets/sacha-verheij.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1)), url(../assets/sacha-verheij.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    
+    min-height: 100vh;
 }
 
 .main-page {
@@ -11,22 +11,27 @@
 
 .title {
     padding: 11rem;
-    font-size: 700%;
-    color: lightblue;
+    font-size: 900%;
+    color: rgb(147, 210, 231);
     align-items: center;
     justify-content: center;
     text-align: center;
+    text-shadow: horizontal-offset vertical-offset blur color;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+
 }
 
 .title:hover {
-    font-size: 710%;
+    font-size: 910%;
     color: rgb(199, 227, 236);
 }
 
 .byline {
-    color: lightblue;
+    color: rgb(147, 210, 231);
     font-size: 300%;
     text-align: center;
+    text-shadow: horizontal-offset vertical-offset blur color;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 .byline:hover {
