@@ -2,12 +2,13 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { FIndexComponent } from "./findex/index.component";
 import { FCreateComponent } from "./create/create.component";
+import { ViewComponent } from "./viewbyid/viewbyid.component";
 
 const routes: Routes = [
     { path: 'Flights', redirectTo: 'Flights/index', pathMatch: 'full' },
     { path: 'Flights/index', component: FIndexComponent },
     { path: 'Flights/create', component: FCreateComponent },
-    // { path: 'flight/:id', component: ViewComponent },
+    { path: 'flight/:id', component: ViewComponent },
     // { path: 'Flights/edit', component: EditComponent },
 ];
 

@@ -22,6 +22,13 @@ export class FIndexComponent implements OnInit {
     this.travelService.getFlights().subscribe(flights => this.flights = flights);
   }
 
+  deleteFlight(id:number) {
+    this.travelService.deleteFlight(id).subscribe(res => {
+      this.flights = this.flights.filter(item => item.id !==id);
+      console.log("Flight deleted successfully")
+    })
+  }
+
 }
 
 // provide a way 

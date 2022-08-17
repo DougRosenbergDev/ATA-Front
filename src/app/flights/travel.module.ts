@@ -5,6 +5,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { TravelRoutingModule } from './travel-routing.module';
 import { FIndexComponent } from './findex/index.component';
 import { FCreateComponent } from './create/create.component';
+import { ViewComponent } from './viewbyid/viewbyid.component';
 // import { EditComponent } from '../passengers/edit/edit.component';
 // import { DeleteComponent } from '../passengers/delete/delete.component';
 // import { ViewComponent } from '../passengers/viewbyid/viewbyid.component';
@@ -13,6 +14,7 @@ import { FCreateComponent } from './create/create.component';
   declarations: [
     FIndexComponent,
     FCreateComponent,
+    ViewComponent,
     // EditComponent,
     // DeleteComponent,
     // ViewComponent
