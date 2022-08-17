@@ -12,6 +12,7 @@
                 <th>Departure Airport</th>
                 <th>Arrival Airport</th>
                 <th>Passenger Limit</th>
+                <th class="edit-col">Edit</th>
             </tr>
         </thead>
         <tbody>
@@ -24,7 +25,14 @@
                 <td>{{ flight.departureAirport }}</td>
                 <td>{{ flight.arrivalAirport }}</td>
                 <td>{{ flight.passengerLimit }}</td>
-                
+                <td>
+                    <button class="btn btn-info">
+                        Edit
+                    </button>
+                    <button class="btn btn-danger">
+                        Delete
+                    </button>
+                </td>
             </tr>
         </tbody>
     </table>

@@ -18,3 +18,8 @@
 .nav-link {
     size: 80px;
 }
+
+.frontpage-image {
+    align-items: center;
+    justify-content: center;
+}

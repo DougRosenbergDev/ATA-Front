@@ -9,6 +9,7 @@
                 <th scope="col">Email</th>
                 <th scope="col">Job</th>
                 <th scope="col">Age</th>
+                <th>Edit</th>
             </tr>
         </thead>
         <tbody>
@@ -17,7 +18,15 @@
                 <td>{{ passenger.lastName }}</td>
                 <td>{{ passenger.email }}</td>
                 <td>{{ passenger.job }}</td>
-                <td>{{ passenger.age }}</td>            
+                <td>{{ passenger.age }}</td>
+                <td>
+                    <button class="btn btn-info">
+                        Edit
+                    </button>
+                    <button class="btn btn-danger">
+                        Delete
+                    </button>
+                </td>          
             </tr>
         </tbody>
     </table>
