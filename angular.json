@@ -23,8 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "bootswatch/dist/cerulean/bootstrap.min.css"
+              "src/styles.css"
               ],
               "scripts": [
               ]
@@ -99,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "7f65ed4c-928b-4a3f-9b3e-cb996f476ef8"
   }
 }
