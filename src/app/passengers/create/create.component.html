@@ -21,7 +21,7 @@
 
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="text" class="form-control" id="email" formControlemail="email" />
+            <input type="text" class="form-control" id="email" formControlName="email" />
             <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
                 <div *ngIf="f['email'].errors f['email'].errors[required]">Email is required</div>
             </div>
@@ -29,7 +29,7 @@
 
         <div class="form-group">
             <label for="job">Job</label>
-            <input type="text" placeholder="00:00:00" class="form-control" id="job" formControlName="job" />
+            <input type="text" class="form-control" id="job" formControlName="job" />
             <div *ngIf="f['job'].touched && f['job'].invalid" class="alert alert-danger">
                 <div *ngIf="f['job'].errors f['job'].errors[required]">Job is required</div>
             </div>

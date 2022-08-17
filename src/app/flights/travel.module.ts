@@ -4,12 +4,12 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { TravelRoutingModule } from './travel-routing.module';
 import { FIndexComponent } from './findex/index.component';
-import { CreateComponent } from './create/create.component';
+import { FCreateComponent } from './create/create.component';
 
 @NgModule({
   declarations: [
     FIndexComponent,
-    CreateComponent
+    FCreateComponent
   ],
   imports: [
     CommonModule,

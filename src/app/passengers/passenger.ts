@@ -1,18 +1,18 @@
 export interface Passenger {
     id: number;
-    firstName: string
-    lastName: string
-    email: string
-    job: string
-    age: number
+    firstName: string;
+    lastName: string;
+    email: string;
+    job: string;
+    age: number;
 }
 
 export interface PassengerDTO {
-    firstName: string
-    lastName: string
-    email: string
-    job: string
-    age: number
+    firstName: string;
+    lastName: string;
+    email: string;
+    job: string;
+    age: number;
 }
 
 
