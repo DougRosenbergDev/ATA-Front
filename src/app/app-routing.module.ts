@@ -9,9 +9,9 @@ import { FCreateComponent } from "./flights/create/create.component";
 const routes: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
   { path: 'Flights', component: FIndexComponent },
-  { path: 'Flights/create', component: FCreateComponent },
+  // { path: 'Flights/create', component: FCreateComponent },
   { path: 'Passengers', component: PIndexComponent },
-  { path: 'Passengers/create', component: PCreateComponent },
+  // { path: 'Passengers/create', component: PCreateComponent },
   // { path: 'Bookings/index', component: BookingsComponent },
 
 ];

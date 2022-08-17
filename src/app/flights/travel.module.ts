@@ -5,11 +5,17 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { TravelRoutingModule } from './travel-routing.module';
 import { FIndexComponent } from './findex/index.component';
 import { FCreateComponent } from './create/create.component';
+// import { EditComponent } from '../passengers/edit/edit.component';
+// import { DeleteComponent } from '../passengers/delete/delete.component';
+// import { ViewComponent } from '../passengers/viewbyid/viewbyid.component';
 
 @NgModule({
   declarations: [
     FIndexComponent,
-    FCreateComponent
+    FCreateComponent,
+    // EditComponent,
+    // DeleteComponent,
+    // ViewComponent
   ],
   imports: [
     CommonModule,

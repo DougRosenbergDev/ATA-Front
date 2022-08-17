@@ -22,6 +22,17 @@ export class PIndexComponent implements OnInit {
     this.personService.getPassengers().subscribe(passengers => this.passengers = passengers);
   }
 
+  deletePassenger(id:number) {
+    this.personService.deletePassenger(id).subscribe(res => {
+      this.passengers = this.passengers.filter(item => item.id !==id);
+      console.log("Post deleted successfully")
+    })
+  }
+
+  // deletePassenger(id: Number): Observable<Passenger> {
+  //   return this.http.delete<Passenger>(`${this.personUrl}/${id}`, this.httpOptions);
+  // }
+
 }
 
 // provide a way 
