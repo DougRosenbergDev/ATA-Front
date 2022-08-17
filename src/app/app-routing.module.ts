@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'Flights/create', component: FCreateComponent },
   { path: 'Passengers', component: PIndexComponent },
   { path: 'Passengers/create', component: PCreateComponent },
+
 ];
 
 @NgModule({
