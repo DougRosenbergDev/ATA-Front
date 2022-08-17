@@ -1,5 +1,12 @@
-
-
+.theme {
+    background-image: url(../assets/sacha-verheij.jpg);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    width: 100%;
+    right: 30%;
+    background-blend-mode: soft-light;
+    align-items: center;
+}
 
 .title {
     size: 150px;
@@ -12,11 +19,10 @@
 .byline {
     color: blue;
     text-align: center;
-
 }
 
-.nav-link {
-    size: 80px;
+.navcol {
+    background-color: #e3f2fd;    
 }
 
 .frontpage-image {
