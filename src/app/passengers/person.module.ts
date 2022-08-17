@@ -5,11 +5,13 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { PersonRoutingModule } from './person-routing.module';
 import { PIndexComponent } from './pindex/index.component';
 import { PCreateComponent } from './create/create.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
     PIndexComponent,
-    PCreateComponent
+    PCreateComponent,
+    EditComponent
   ],
   imports: [
     CommonModule,
