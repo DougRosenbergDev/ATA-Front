@@ -16,9 +16,7 @@ export class EditComponent implements OnInit {
   form!: FormGroup;
     
   /*------------------------------------------
-  --------------------------------------------
   Created constructor
-  --------------------------------------------
   --------------------------------------------*/
   constructor(
     public personService: PersonService,
@@ -28,7 +26,6 @@ export class EditComponent implements OnInit {
     
   /**
    * Write code on Method
-   *
    * @return response()
    */
   ngOnInit(): void {
