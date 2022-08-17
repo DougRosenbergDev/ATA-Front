@@ -19,14 +19,14 @@ export class FCreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.newFlightForm = new FormGroup({
-      flightNumber: new FormControl('', Validators.required),
-      departureDate: new FormControl('', Validators.required),
-      arrivalDate: new FormControl('', Validators.required),
-      departureTime: new FormControl('', Validators.required),
-      arrivalTime: new FormControl('', Validators.required),
-      departureAirport: new FormControl('', Validators.required),
-      arrivalAirport: new FormControl('', Validators.required),
-      passengerLimit: new FormControl('', Validators.required)
+      FlightNumber: new FormControl('', Validators.required),
+      DepartureDate: new FormControl('', Validators.required),
+      ArrivalDate: new FormControl('', Validators.required),
+      DepartureTime: new FormControl('', Validators.required),
+      ArrivalTime: new FormControl('', Validators.required),
+      DepartureAirport: new FormControl('', Validators.required),
+      ArrivalAirport: new FormControl('', Validators.required),
+      PassengerLimit: new FormControl('', Validators.required)
     });
   }
 

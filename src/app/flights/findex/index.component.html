@@ -4,6 +4,7 @@
     <table class="table table-bordered table-striped table-hover">
         <thead>
             <tr>
+                <th>Flight Number</th>
                 <th>Departure Date</th>
                 <th>Arrival Date</th>
                 <th>Departure Time</th>
@@ -15,6 +16,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let flight of flights">
+                <td>{{ flight.flightNumber }}</td>
                 <td>{{ flight.departureDate }}</td>
                 <td>{{ flight.arrivalDate }}</td>
                 <td>{{ flight.departureTime }}</td>

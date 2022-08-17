@@ -1,24 +1,24 @@
 export interface Flight {
     id: number;
-    flightNumber: string;
+    flightNumber: number;
     departureDate: string;
     arrivalDate: string;
     departureTime: string;
     arrivalTime: string;
     departureAirport: string;
     arrivalAirport: string;
-    passengerLimit: string;
+    passengerLimit: number;
 }
 
 export interface FlightDTO {
-    flightNumber: string;
+    flightNumber: number;
     departureDate: string;
     arrivalDate: string;
     departureTime: string;
     arrivalTime: string;
     departureAirport: string;
     arrivalAirport: string;
-    passengerLimit: string;
+    passengerLimit: number;
 }
 
 
