@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BindexComponent } from './bindex/bindex.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BookingRoutingModule } from './booking-routing.module';
+import { RegisterRoutingModule } from './booking-routing.module';
+import { BindexComponent } from './bindex/bindex.component';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,7 @@ import { BookingRoutingModule } from './booking-routing.module';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    BookingRoutingModule
+    RegisterRoutingModule
   ]
 })
-export class BookingModule { }
+export class RegisterModule { }

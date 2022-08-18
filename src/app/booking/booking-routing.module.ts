@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from "@angular/router";
+import { BindexComponent } from './bindex/bindex.component';
 
-
+const routes: Routes = [
+  { path: 'Bookings', redirectTo: 'Bookings/index', pathMatch: 'full' },
+  { path: 'Bookings/index', component: BindexComponent },
+]
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  imports: [ RouterModule.forChild(routes) ],
+  exports: [RouterModule]
 })
-export class BookingRoutingModule { }
+export class RegisterRoutingModule { }
