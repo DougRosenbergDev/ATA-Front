@@ -25,7 +25,7 @@ export class PIndexComponent implements OnInit {
   deletePassenger(id:number) {
     this.personService.deletePassenger(id).subscribe(res => {
       this.passengers = this.passengers.filter(item => item.id !==id);
-      console.log("Post deleted successfully")
+      console.log("Passenger deleted successfully")
     })
   }
 
