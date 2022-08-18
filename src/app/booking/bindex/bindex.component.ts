@@ -19,7 +19,7 @@ export class BindexComponent implements OnInit {
  }
 
  retrieveBookings(): void {
-   this.registerService.getBookings().subscribe(bookings => this.bookings = this.bookings);
+   this.registerService.getBookings().subscribe(bookings => this.bookings = bookings);
  }
 
  deleteBooking(id:number) {
