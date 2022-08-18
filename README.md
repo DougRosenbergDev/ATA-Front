@@ -1,4 +1,4 @@
-# dougBranch7 has a workable MVP
+# dougBranch9 has a workable MVP: view, view by id, create, delete, decent css, but no edit or bookings
 
 # ATAFront
 
