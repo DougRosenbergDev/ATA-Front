@@ -21,7 +21,7 @@
 
         <div class="form-group">
             <label for="arrivalDate">Arrival Date</label>
-            <input type="text" class="form-control" id="arrivalDate" formControlarrivalDate="arrivalDate" />
+            <input type="text" class="form-control" id="arrivalDate" formControlName="arrivalDate" />
             <div *ngIf="f['arrivalDate'].touched && f['arrivalDate'].invalid" class="alert alert-danger">
                 <div *ngIf="f['arrivalDate'].errors f['arrivalDate'].errors[required]">Arrival Date is required</div>
             </div>

@@ -26,7 +26,7 @@
                 <td>{{ flight.arrivalAirport }}</td>
                 <td>{{ flight.passengerLimit }}</td>
                 <td>
-                    <a href="#" [routerLink]="['/Flight/', flight.id]" class="btn btn-primary">Details</a>
+                    <a href="#" [routerLink]="['/flight/', flight.id]" class="btn btn-primary">Details</a>
                     <a href="#" [routerLink]="['/Flights/edit/', flight.id]" class="btn btn-info">Edit</a>
                     <button type="button" (click)="deleteFlight(flight.id)" class="btn btn-danger">Delete</button>
                 </td>
