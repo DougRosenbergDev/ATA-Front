@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Passenger } from '../passenger'; 
+import { Flight } from '../flight'; 
 import { FormGroup, FormControl, Validators} from '@angular/forms';
-import { PersonService } from '../person.service'; 
+import { TravelService } from '../travel.service'; 
 
      
 @Component({
@@ -13,14 +13,14 @@ import { PersonService } from '../person.service';
 export class EditComponent implements OnInit {
       
   id!: number;
-  passenger!: Passenger;
+  flight!: Flight;
   form!: FormGroup;
     
   /*------------------------------------------
   Created constructor
   --------------------------------------------*/
   constructor(
-    public personService: PersonService,
+    public travelService: TravelService,
     private route: ActivatedRoute,
     private router: Router
   ) { }
@@ -31,18 +31,21 @@ export class EditComponent implements OnInit {
    */
   ngOnInit(): void {
     this.id = this.route.snapshot.params['postId'];
-    this.personService.getPassenger(this.id).subscribe((data: Passenger)=>{
-      this.passenger = data;
+    this.travelService.getFlight(this.id).subscribe((data: Flight)=>{
+      this.flight = data;
     }); 
       
     this.form = new FormGroup({
       // title: new FormControl('', [Validators.required]),
       // body: new FormControl('', Validators.required)
-      firstName: new FormControl('', Validators.required),
-      lastName: new FormControl('', Validators.required),
-      email: new FormControl('', Validators.required),
-      job: new FormControl('', Validators.required),
-      age: new FormControl('', Validators.required)
+      flightNumber: new FormControl('', Validators.required),
+      departureDate: new FormControl('', Validators.required),
+      arrivalDate: new FormControl('', Validators.required),
+      departureTime: new FormControl('', Validators.required),
+      arrivalTime: new FormControl('', Validators.required),
+      departureAirport: new FormControl('', Validators.required),
+      arrivalAirport: new FormControl('', Validators.required),
+      passengerLimit: new FormControl('', Validators.required)
     });
   }
     
@@ -62,9 +65,9 @@ export class EditComponent implements OnInit {
    */
   submit(){
     console.log(this.form.value);
-    this.personService.updatePassenger(this.form.value).subscribe((res:any) => {
-         console.log('Passenger updated successfully!');
-         this.router.navigateByUrl('Passengers/index');
+    this.travelService.updateFlight(this.form.value).subscribe((res:any) => {
+         console.log('Flight updated successfully!');
+         this.router.navigateByUrl('Flights/index');
     })
   }
    

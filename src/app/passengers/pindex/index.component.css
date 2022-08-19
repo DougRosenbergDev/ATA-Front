@@ -3,3 +3,8 @@
     margin-left: 1rem;
     align-items: center;
 }
+
+* {
+    font-size: 1.3rem;
+    color: darkblue;
+}

@@ -10,7 +10,7 @@ const routes: Routes = [
     { path: 'Passengers/index', component: PIndexComponent },
     { path: 'Passengers/create', component: PCreateComponent },
     { path: 'passenger/:id', component: ViewComponent },
-    { path: 'Passengers/edit', component: EditComponent },
+    { path: 'Passengers/edit/:id', component: EditComponent },
 
 ];
 

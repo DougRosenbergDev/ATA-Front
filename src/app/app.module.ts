@@ -8,9 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PersonModule } from './passengers/person.module';
 import { TravelModule } from './flights/travel.module';
-// import { BookingsComponent } from './bookings/bookings.component';
-// import { BindexComponent } from './bookings/bindex/bindex.component';
-// import { BookingsModule } from './bookings/bookings.module';
+import { RegisterModule } from './booking/booking.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +29,7 @@ import { TravelModule } from './flights/travel.module';
     // ),
     PersonModule,
     TravelModule,
+    RegisterModule
     // BookingsModule
   ],
   providers: [],
