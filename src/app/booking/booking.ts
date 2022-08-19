@@ -3,6 +3,9 @@ export interface Booking {
     confirmationNumber: number;
     flightId: string;
     passengerId: string;
+    passengerCount: number;
+    purchasers: [];
+    flights: [];
 }
 
 export interface BookingDTO {

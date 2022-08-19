@@ -23,4 +23,32 @@
         <p>{{ booking.passengerId }}</p>
     </div>
    
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Passenger Count</th>
+                <th>Passengers on Board</th>
+                <th>Flights</th>
+                <th class="edit-col">Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr >
+            <!-- *ngFor="let booking of bookings" -->
+            
+                <td>{{ booking.id }}</td>
+                <td>{{ booking.passengerCount }}</td>
+                <td>{{ booking.purchasers }}</td>
+                <td>{{ booking.flights }}</td>
+                
+                <!-- <td>
+                    <a href="#" [routerLink]="['/Bookings/', booking.id]" class="btn btn-primary">Details</a>
+                    <a href="#" [routerLink]="['/Bookings/edit/', booking.id]" class="btn btn-info">Edit</a>
+                    <button type="button" (click)="deleteBooking(booking.id)" class="btn btn-danger">Delete</button>
+                </td> -->
+            </tr>
+        </tbody>
+    </table>
+
 </div>

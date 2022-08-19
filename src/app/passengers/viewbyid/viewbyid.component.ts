@@ -33,6 +33,8 @@ export class ViewComponent implements OnInit {
     this.personService.getPassenger(this.id).subscribe((data: Passenger)=>{
       this.passenger = data;
     });
+
+    
   }
     
 }
