@@ -22,26 +22,26 @@ private httpOptions = {
 
 constructor(private http: HttpClient) { }
 
-getBookings(): Observable<Booking[]> {
-  return this.http.get<Booking[]>(this.registerUrl, this.httpOptions);
+getBookings(): Observable<BookingDTO[]> {
+  return this.http.get<BookingDTO[]>(this.registerUrl, this.httpOptions);
 }
 
-getBooking(id: number): Observable<Booking> {
+getBooking(id: number): Observable<BookingDTO> {
   let url = `${this.registerUrl}/${id}`;
-  return this.http.get<Booking>(url, this.httpOptions);
+  return this.http.get<BookingDTO>(url, this.httpOptions);
 }
 
-createBooking(booking: Booking): Observable<Booking> {
-  return this.http.post<Booking>(this.registerUrl, booking, this.httpOptions);
+createBooking(booking: BookingDTO): Observable<BookingDTO> {
+  return this.http.post<BookingDTO>(this.registerUrl, booking, this.httpOptions);
 }
 
-updateBooking(booking: Booking): Observable<Booking> {
+updateBooking(booking: BookingDTO): Observable<BookingDTO> {
   let url = `${this.registerUrl}/${booking.id}`;
-  return this.http.put<Booking>(url, booking, this.httpOptions);
+  return this.http.put<BookingDTO>(url, booking, this.httpOptions);
 }
 
-deleteBooking(id: Number): Observable<Booking> {
-  return this.http.delete<Booking>(`${this.registerUrl}/${id}`, this.httpOptions);
+deleteBooking(id: Number): Observable<BookingDTO> {
+  return this.http.delete<BookingDTO>(`${this.registerUrl}/${id}`, this.httpOptions);
 }
 
 // errorHandler(error: any, caught: Observable<Flight[]>) {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RegisterService } from '../booking.service'; 
-import { Booking } from '../booking';
+import { Booking, BookingDTO } from '../booking';
     
 @Component({
   selector: 'app-view',
@@ -11,7 +11,7 @@ import { Booking } from '../booking';
 export class ViewComponent implements OnInit {
      
   id!: number;
-  booking!: Booking;
+  booking!: BookingDTO;
     
   /*------------------------------------------
   Created constructor
@@ -30,7 +30,7 @@ export class ViewComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
         
-    this.registerService.getBooking(this.id).subscribe((data: Booking)=>{
+    this.registerService.getBooking(this.id).subscribe((data: BookingDTO)=>{
       this.booking = data;
     });
   }

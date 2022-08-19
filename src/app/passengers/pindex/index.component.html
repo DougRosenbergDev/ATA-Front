@@ -4,6 +4,7 @@
     <table class="table table-bordered table-striped table-hover">
         <thead>
             <tr>
+                <th scope="col">ID</th>
                 <th scope="col">First Name</th>
                 <th scope="col">Last Name</th>
                 <th scope="col">Email</th>
@@ -14,6 +15,7 @@
         </thead>
         <tbody>
             <tr class="table-active" *ngFor="let passenger of passengers">
+                <td>{{ passenger.id }}</td>
                 <td>{{ passenger.firstName }}</td>
                 <td>{{ passenger.lastName }}</td>
                 <td>{{ passenger.email }}</td>
