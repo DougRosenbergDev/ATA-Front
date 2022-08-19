@@ -19,7 +19,7 @@
                 <td>{{ booking.passengerId }}</td>
                 
                 <td>
-                    <a href="#" [routerLink]="['/booking/', booking.id]" class="btn btn-primary">Details</a>
+                    <a href="#" [routerLink]="['/Bookings/', booking.id]" class="btn btn-primary">Details</a>
                     <a href="#" [routerLink]="['/Bookings/edit/', booking.id]" class="btn btn-info">Edit</a>
                     <button type="button" (click)="deleteBooking(booking.id)" class="btn btn-danger">Delete</button>
                 </td>

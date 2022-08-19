@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'Bookings', redirectTo: 'Bookings/index', pathMatch: 'full' },
   { path: 'Bookings/index', component: BindexComponent },
   { path: 'Bookings/create', component: BCreateComponent },
-  { path: 'booking/:id', component: ViewComponent },
+  { path: 'Bookings/:id', component: ViewComponent },
   { path: 'Bookings/edit/:id', component: EditComponent },
 ]
 
