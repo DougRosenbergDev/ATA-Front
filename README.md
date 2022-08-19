@@ -1,5 +1,3 @@
-# dougBranch9 has a workable MVP: view, view by id, create, delete, decent css, but no edit or bookings
-
 # ATA Airlines
 This is project 1 for SkillStorm NextGen .NET cohort. It features a .NET backend using EF Web API and SQLServer which can be found here: https://github.com/DougRosenbergDev/AirTravelApp/tree/dougBranch2. You are presently viewing the frontend code, which uses Angular.
 
