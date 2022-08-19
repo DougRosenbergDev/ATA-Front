@@ -8,10 +8,11 @@ import { Flight, FlightDTO } from './flight';
 @Injectable({
   providedIn: 'root'
 })
-export class FlightService {
+export class TravelService {
   //switch out these lines once swagger is running...
   //private musicUrl = 'http://localhost:7004/api/Music';
-  private flightUrl = 'api/Flight';
+  private travelUrl = 'https://localhost:7004/api/Flights';
+  //private travelUrl = 'api/Flights';
 
 private httpOptions = {
   headers: new HttpHeaders({
@@ -21,26 +22,26 @@ private httpOptions = {
 
 constructor(private http: HttpClient) { }
 
-getSongs(): Observable<Flight[]> {
-  return this.http.get<Flight[]>(this.flightUrl, this.httpOptions);
+getFlights(): Observable<Flight[]> {
+  return this.http.get<Flight[]>(this.travelUrl, this.httpOptions);
 }
 
 getFlight(id: number): Observable<Flight> {
-  let url = `${this.flightUrl}/${id}`;
+  let url = `${this.travelUrl}/${id}`;
   return this.http.get<Flight>(url, this.httpOptions);
 }
 
 createFlight(flight: Flight): Observable<Flight> {
-  return this.http.post<Flight>(this.flightUrl, flight, this.httpOptions);
+  return this.http.post<Flight>(this.travelUrl, flight, this.httpOptions);
 }
 
 updateFlight(flight: Flight): Observable<Flight> {
-  let url = `${this.flightUrl}/${flight.id}`;
+  let url = `${this.travelUrl}/${flight.id}`;
   return this.http.put<Flight>(url, flight, this.httpOptions);
 }
 
 deleteFlight(id: Number): Observable<Flight> {
-  return this.http.delete<Flight>(`${this.flightUrl}/${id}`, this.httpOptions);
+  return this.http.delete<Flight>(`${this.travelUrl}/${id}`, this.httpOptions);
 }
 
 // errorHandler(error: any, caught: Observable<Flight[]>) {

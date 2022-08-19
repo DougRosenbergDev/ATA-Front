@@ -1,9 +1,10 @@
 <div class="container">
     <h1>Flights</h1>
-    <a href="#" routerLink="/flight/create/" class="btn btn-success">+ Create A Flight</a>
-    <table class="table table-bordered table-striped">
+    <a href="#" routerLink="/Flights/create/" class="btn btn-success">+ Create A Flight</a>
+    <table class="table table-bordered table-striped table-hover">
         <thead>
             <tr>
+                <th>Flight Number</th>
                 <th>Departure Date</th>
                 <th>Arrival Date</th>
                 <th>Departure Time</th>
@@ -11,10 +12,12 @@
                 <th>Departure Airport</th>
                 <th>Arrival Airport</th>
                 <th>Passenger Limit</th>
+                <th class="edit-col">Edit</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let flight of flights">
+                <td>{{ flight.flightNumber }}</td>
                 <td>{{ flight.departureDate }}</td>
                 <td>{{ flight.arrivalDate }}</td>
                 <td>{{ flight.departureTime }}</td>
@@ -22,7 +25,11 @@
                 <td>{{ flight.departureAirport }}</td>
                 <td>{{ flight.arrivalAirport }}</td>
                 <td>{{ flight.passengerLimit }}</td>
-                
+                <td>
+                    <a href="#" [routerLink]="['/flight/', flight.id]" class="btn btn-primary">Details</a>
+                    <a href="#" [routerLink]="['/flight/edit/', flight.id]" class="btn btn-info">Edit</a>
+                    <button type="button" (click)="deleteFlight(flight.id)" class="btn btn-danger">Delete</button>
+                </td>
             </tr>
         </tbody>
     </table>

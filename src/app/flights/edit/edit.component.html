@@ -1,8 +1,9 @@
 <div class="container">
-    <h1>Create a New Flight</h1>
-    <a href="#" routerLink="/Flights/index" class="btn btn-primary">&lt;&lt; Back</a>
-    <form [formGroup]="newFlightForm" (ngSubmit)="submit()" >
-
+    <h1>Update Passenger</h1>
+    <a href="#" routerLink="/Passengers/index" class="btn btn-primary">&lt;&lt; Back</a>
+          
+    <form [formGroup]="form" (ngSubmit)="submit()">
+    
         <div class="form-group">
             <label for="flightNumber">Flight Number</label>
             <input type="text" class="form-control" id="flightNumber" formControlName="flightNumber" />
@@ -66,9 +67,7 @@
                 <div *ngIf="f['passengerLimit'].errors f['passengerLimit'].errors[required]">Passenger Limit is required</div>
             </div>
         </div>
-
-        <button type="submit" class="btn btn-primary" [disabled]="!newFlightForm.valid">Submit</button>
+           
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Update</button>
     </form>
 </div>
-
-

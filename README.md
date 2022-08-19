@@ -1,27 +1,13 @@
-# ATAFront
+# dougBranch9 has a workable MVP: view, view by id, create, delete, decent css, but no edit or bookings
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
+# ATA Airlines
+This is project 1 for SkillStorm NextGen .NET cohort. It features a .NET backend using EF Web API and SQLServer which can be found here: https://github.com/DougRosenbergDev/AirTravelApp/tree/dougBranch2. You are presently viewing the frontend code, which uses Angular.
 
-## Development server
+## Run on your own machine
+To make this project work, clone both front- and back-end repositories and run npm install from the console for each. Open backend in Visual Studio, click on AirlineTravelApp.sln, clean solution, build solution, and press play. A Swagger API UI will open in the browser, which means the backend is running. Open frontend in Visual Studio Code, open a terminal, and run "ng serve". Open a browser and navigate to localhost:4200/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## What works and what doesn't work?
+This app is able to view/viewById/create/delete Flights, Passengers, and Bookings. The backend was a little broken with editing. In the future, I would like to go back and tweak the .NET model to simplify updates. Another goal would be to auto-generate a confirmation number for every booking.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Questions
+Please reach out to drosenberg@skillstorm.com with any feedback :)

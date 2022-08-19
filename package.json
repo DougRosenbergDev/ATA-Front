@@ -29,6 +29,7 @@
     "@types/jasmine": "~4.0.0",
     "angular-in-memory-web-api": "^0.14.0",
     "bootstrap": "^5.2.0",
+    "bootswatch": "^5.2.0",
     "jasmine-core": "~4.2.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
