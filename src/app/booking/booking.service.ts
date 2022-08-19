@@ -35,7 +35,7 @@ createBooking(booking: Booking): Observable<Booking> {
   return this.http.post<Booking>(this.registerUrl, booking, this.httpOptions);
 }
 
-updateFlight(booking: Booking): Observable<Booking> {
+updateBooking(booking: Booking): Observable<Booking> {
   let url = `${this.registerUrl}/${booking.id}`;
   return this.http.put<Booking>(url, booking, this.httpOptions);
 }
